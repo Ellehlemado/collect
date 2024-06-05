@@ -736,7 +736,7 @@ if res == "Scrapper les données avec BS":
     # st.table(table)
     st.header("Moutons")
     
-    st.image("images/mustang.jpg")
+    st.image("images/mouton.jpg")
     click = st.button("Scrapper mouton")
 
     if click:
@@ -744,7 +744,7 @@ if res == "Scrapper les données avec BS":
         st.dataframe(sc)
 
     st.header("Poule lapins pigeons")
-    st.image("images/moto2.jpg")
+    st.image("images/poule.jpg")
     click = st.button("Scrapper PLP")
 
     if click:
@@ -752,7 +752,7 @@ if res == "Scrapper les données avec BS":
         st.dataframe(sc)
 
     st.header("Chien")
-    st.image("images/telep.jpg")
+    st.image("images/chien.jpeg")
     click = st.button("Scrapper chien")
 
     if click:
@@ -760,7 +760,7 @@ if res == "Scrapper les données avec BS":
         st.dataframe(sc)
     
     st.header("Autres animaux")
-    st.image("images/telep.jpg")
+    st.image("images/autres.jpg")
     click = st.button("Scrapper autres")
 
     if click:
@@ -813,34 +813,36 @@ elif res == "Scrapper les données avec web Scraper":
     st.text("Ci-dessous se trouve les données disponible pour le scraping")
     st.markdown("---")
     # st.table(table)
-    st.header("Voiture")
+    st.header("Moutons")
     
-    st.image("images/mustang.jpg")
-    click = st.button("Scrapper les données des voitures en location")
+    st.image("images/mouton.jpg")
+    click = st.button("Scrapper Moutons")
 
     if click:
-        df = pd.read_csv("datas/autolocdakarvente.csv")
+        df = pd.read_csv("datas/moutons.csv")
         st.dataframe(df)
 
-    click = st.button("Scrapper les données des voitures en ventes")
+    st.header("Poules Lapin Pigeon")
+    st.image("images/poule.jpg")
+    click = st.button("Scrapper PLP")
 
     if click:
-        df = pd.read_csv("datas/autodakarvente.csv")
+        df = pd.read_csv("datas/plp.csv")
         st.dataframe(df)
 
-
-    st.header("Motos")
-    st.image("images/moto2.jpg")
-    click = st.button("Scrapper les données des motos")
+    st.header("Chien")
+    st.image("images/chien.jpeg")
+    click = st.button("Scrapper chien")
 
     if click:
-        df = pd.read_csv("datas/motodakarvente.csv")
+        df = pd.read_csv("datas/chien.csv")
         st.dataframe(df)
 
-    st.header("Telephone")
-    st.image("images/telep.jpg")
-    click = st.button("Scrapper les données des telephones")
+    st.header("Autres")
+    st.image("images/autres.jpg")
+    click = st.button("Scrapper autres")
 
     if click:
-        df = pd.read_csv("datas/teldakarvente.csv")
+        df = pd.read_csv("datas/autres.csv")
         st.dataframe(df)
+
