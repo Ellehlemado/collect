@@ -30,7 +30,8 @@ def scrap(id,nb_page):
     df_autre = pd.DataFrame()
 
     for p in range(1,5):
-        url =f'https://sn.coinafrique.com/categorie/autres-animaux?page={p}'
+        url =f'https://sn.coinafrique.com/categorie/moutons?page={p}'
+        #url =f'https://sn.coinafrique.com/categorie/autres-animaux?page={p}'
         resp = get(url)
         bsoup = bs(resp.text, 'html.parser')
         containers = bsoup.find_all('div', class_ ='col s6 m4 l3')
